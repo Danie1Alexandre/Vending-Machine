@@ -49,7 +49,8 @@ namespace Vending_Machine
                         break;
                     
                     case 2:
-                        Console.WriteLine("Available products products ");
+                        Console.WriteLine("\n  Available products products");
+                        Console.WriteLine("-------------------------------");
                         vendingMachine.ShowAll(productList.ProductCollection);
 
                         break;

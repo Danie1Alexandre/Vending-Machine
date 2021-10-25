@@ -15,13 +15,5 @@ namespace Vending_Machine.Data
             get { return productCollection; }
             set { productCollection = value; }
         }
-
-        public Products[] findProducts()
-        {
-            return productCollection;
-        }
-
-
-
     }
 }

@@ -84,7 +84,7 @@ namespace Vending_Machine.Model
         {
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine(collection[i].Name);
+                Console.WriteLine("\t" + collection[i].Name);
             }
         }
     }
