@@ -72,12 +72,27 @@ namespace Vending_Machine.Model
 
         public void EndTransaction()
         {
+            int payOut = 0;
+            int totalMoneyPool = moneyPool;
 
-            Console.WriteLine("\nTransaktion ended ");
-            if (0 < MoneyPool)
+            Console.WriteLine("\nAmount of change returned: ");
+
+            for (int i = 7; i > -1; i--)
             {
-                Console.WriteLine("Amount of change returned: " + moneyPool);
+                payOut = moneyPool / arrayPrice[i];
+
+                if (payOut != 0)
+                {
+                    int temporaryMoneyPool = payOut * arrayPrice[i];
+
+                    moneyPool = moneyPool - temporaryMoneyPool;
+
+                    Console.WriteLine(payOut + "x " + arrayPrice[i]);
+                }
             }
+            Console.WriteLine("Total: " + totalMoneyPool + "kr");
+
+
         }
 
         public void ShowAll(Products[] collection)
